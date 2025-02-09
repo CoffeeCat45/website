@@ -456,12 +456,39 @@ opacity: 75%;
 /* Header stiles end*/
 
 /* Intro stiles starts*/
-
 .intro{
   height: 100vh;
   background: url(../img/svg/intro-bg.jpg) no-repeat center;
   background-size: cover;
+  padding-top: 230px;
 
+}
+/*на всякий стиль для тайтла
+.intro_title {
+    width: 600px;
+    height: 250px;
+    font-weight: 400px;
+    line-height: 112px;
+    font-size: 96px;
+    color: #EBEBEB;
+    font-family: 'Roboto Condensed';
+    font-style: normal; 
+    text-align: center;
+}*/
+.wrapper_title{
+    max-width: 1280px;
+  margin: 0 auto;
+  padding-left: 780px;
+}
+/* Intro stiles end*/
+
+
+/* Intro stiles starts*/
+
+.resort_cards{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 70px;
 }
 
 
@@ -470,5 +497,9 @@ opacity: 75%;
 
 
 
-/* Intro stiles end*/
 
+
+
+
+
+/* Intro stiles end*/
