@@ -398,7 +398,9 @@ html{
 *, *::before, *::after{
     box-sizing: inherit;
 }
-
+.main{
+    background-color: rgba(244, 242, 255, 1);
+}
 body{
   font-family: 'PT Sans';
   font-style: normal;
@@ -407,11 +409,14 @@ body{
   font-weight: normal;
   color: #000;
 }
-
+.img{
+    max-width: 100%;
+    height: auto;
+}
 .wrapper{
   max-width: 1280px;
   margin: 0 auto;
-
+  
 }
 
 /* Header stiles starts*/
@@ -422,6 +427,7 @@ position: fixed;
 top: 0;
 left: 0;
 width: 100%;
+background-color: rgb(86, 87, 90);
 }
 
 .header_wrapper{
@@ -430,6 +436,7 @@ width: 100%;
   align-items: flex-end;
   justify-content:left;
   padding-top: 5px;
+  
 }
 .header_list{
   
@@ -453,6 +460,8 @@ text-decoration: none;
 .header_link:hover,.header_link:focus,.header_link:active{
 opacity: 75%;
 }
+
+
 /* Header stiles end*/
 
 /* Intro stiles starts*/
@@ -487,17 +496,57 @@ opacity: 75%;
 
 .resort_cards{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-column-gap: 70px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 0 px;
+
+}
+/*first card start*/
+.card-pic{
+    max-width: 335px;
+    max-height: 240 px;
 }
 
+.card-pict{
+    max-width: 335px;
+    max-height: 240 px;
+    border-radius: 20px;
+    margin-left: 13px;
+    margin-top: 6px;
+}
 
+.fcard{
+    width: 360px;
+    height: 550 px;
+    margin-left: 50px;
+    margin-top: 100px;
+    background-color: rgba(168, 212, 241, 0.1);
+    /*background-color: #7e7a7a;*/
+    border-radius: 15px;
+}
 
+.card-title{
+margin-left: 16px;
+margin-top: 21px;
+font-size: 22px;
+}
 
+.card-deck{
+    margin-left: 21px;
+    margin-top: 21px;
+    padding-bottom: 41px;
+    margin-right: 8px;   
+}
 
-
-
-
+/*first card end*/
+.card{
+    width: 360px;
+    height: 550 px;
+    margin-left: 50px;
+    margin-top: 100px;
+    background-color: rgba(168, 212, 241, 0.1);
+    /*background-color: #7e7a7a;*/
+    border-radius: 15px;
+}
 
 
 
