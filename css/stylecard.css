@@ -516,12 +516,56 @@ opacity: 75%;
 
 }
 
-.content-text{
+/* footer start*/
+.footer-wrapper{
+    top: 0;
+    left: 0;
+    width: 100%; 
+    background-color: #56575A; /* Цвет фона футера */
+    color: white; /* Цвет текста */
+    text-align: center; /* Выравнивание текста по центру */
+}
+.footer {
+    text-align: left;
+    margin: auto;
+    width: 1280px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.footer-link {
+    color: white; /* Цвет ссылки */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-weight: bold;
+    font-size: 24px;
+    color:  #E5EDFA;
+}
+.footer-link:hover,.footer-link:focus,.footer-link:active{
+    opacity: 75%;
+}
+/* footer end*/
 
+
+/*text start*/
+
+.content-text{
     width: 600px;
+    margin: 0 auto; /* Центрируем блок по горизонтали */
+    padding-top: 530px;    
+    padding-bottom: 40px;
+
+}
+.entry-content p {
+    margin-bottom: 24px; /* Устанавливаем отступ в 24 пикселей */
+    
 }
 .text{
 
-/*123*/
-
 }
+.bold{
+    font-weight: bold;
+   
+}
+
+
+
+/*text end*/

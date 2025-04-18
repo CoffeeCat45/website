@@ -461,6 +461,9 @@ text-decoration: none;
 opacity: 75%;
 }
 
+.header_logo-link:hover,.header_logo-link:focus,.header_logo-link   :active{
+    opacity: 85%;
+}
 
 /* Header stiles end*/
 
@@ -556,22 +559,32 @@ font-size: 22px;
 }
 /* Intro stiles end*/
 
-/* Card html start*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Card html end*/
+/* footer start*/
+.footer-wrapper{
+    top: 0;
+    left: 0;
+    width: 100%; 
+    background-color: #56575A; /* Цвет фона футера */
+    color: white; /* Цвет текста */
+    text-align: center; /* Выравнивание текста по центру */
+}
+.footer {
+    text-align: left;
+    margin: auto;
+    width: 1280px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.footer-link {
+    color: white; /* Цвет ссылки */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-weight: bold;
+    font-size: 24px;
+    color:  #E5EDFA;
+}
+.footer-link:hover,.footer-link:focus,.footer-link:active{
+    opacity: 75%;
+}
+/* footer end*/
 
 
