@@ -553,6 +553,15 @@ font-size: 22px;
     border-radius: 15px;
 }
 
+.endcard{
+    width: 360px;
+    height: 550 px;
+    margin-left: 0px;
+    margin-top: 100px;
+    background-color: rgba(168, 212, 241, 0.1);
+    border-radius: 15px;
+    margin-bottom: 50px;
+}
 .card1-html{
     text-decoration: none; /* Убирает подчеркивание */
     color: inherit; /* Устанавливает цвет текста как у родительского элемента */
