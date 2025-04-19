@@ -446,6 +446,7 @@ background-color: rgb(86, 87, 90);
 }
 .header_item{
   margin-left: 114px;
+  margin-bottom: 23px;
 }
 .header_item:last-child{
   margin-right: 0;
@@ -491,6 +492,7 @@ opacity: 75%;
     width: 100%;
     /*overflow: hidden;
     object-fit: cover;*/
+    
 
 }
 .page-title{
@@ -558,12 +560,8 @@ opacity: 75%;
     margin-bottom: 24px; /* Устанавливаем отступ в 24 пикселей */
     
 }
-.text{
-
-}
 .bold{
     font-weight: bold;
-   
 }
 
 

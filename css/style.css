@@ -446,6 +446,7 @@ background-color: rgb(86, 87, 90);
 }
 .header_item{
   margin-left: 114px;
+  margin-bottom: 23px;
 }
 .header_item:last-child{
   margin-right: 0;
