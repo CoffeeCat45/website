@@ -446,6 +446,7 @@ background-color: rgb(86, 87, 90);
 }
 .header_item{
   margin-left: 114px;
+  margin-bottom: 23px;
 }
 .header_item:last-child{
   margin-right: 0;
@@ -461,6 +462,9 @@ text-decoration: none;
 opacity: 75%;
 }
 
+.header_logo-link:hover,.header_logo-link:focus,.header_logo-link   :active{
+    opacity: 85%;
+}
 
 /* Header stiles end*/
 
@@ -506,6 +510,8 @@ opacity: 75%;
 .card-pic{
     max-width: 335px;
     max-height: 240 px;
+    
+    
 }
 
 .card-pict{
@@ -548,28 +554,47 @@ font-size: 22px;
     border-radius: 15px;
 }
 
+.endcard{
+    width: 360px;
+    height: 550 px;
+    margin-left: 0px;
+    margin-top: 100px;
+    background-color: rgba(168, 212, 241, 0.1);
+    border-radius: 15px;
+    margin-bottom: 50px;
+}
 .card1-html{
     text-decoration: none; /* Убирает подчеркивание */
     color: inherit; /* Устанавливает цвет текста как у родительского элемента */
 }
 /* Intro stiles end*/
 
-/* Card html start*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Card html end*/
+/* footer start*/
+.footer-wrapper{
+    top: 0;
+    left: 0;
+    width: 100%; 
+    background-color: #56575A; /* Цвет фона футера */
+    color: white; /* Цвет текста */
+    text-align: center; /* Выравнивание текста по центру */
+}
+.footer {
+    text-align: left;
+    margin: auto;
+    width: 1280px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.footer-link {
+    color: white; /* Цвет ссылки */
+    text-decoration: none; /* Убираем подчеркивание */
+    font-weight: bold;
+    font-size: 24px;
+    color:  #E5EDFA;
+}
+.footer-link:hover,.footer-link:focus,.footer-link:active{
+    opacity: 75%;
+}
+/* footer end*/
 
 
