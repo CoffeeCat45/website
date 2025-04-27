@@ -574,10 +574,13 @@ opacity: 75%;
 
 
 /*text end*/
-
+.social-link{
+    color: white; /* Цвет ссылки */
+    text-decoration: none; /* Убираем подчеркивание */
+}
 .vk_logo-pic{
-width: 30px;
-height: 30px;
+    width: 30px;
+    height: 30px;
 }
 
 .tg_logo-pic{

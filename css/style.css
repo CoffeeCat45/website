@@ -631,7 +631,7 @@ font-size: 22px;
     }
     .fcard{
         width: 300px;
-        height: 500px;
+        height: 550px;
         margin-left: 0px;
         margin-top: 100px;
         background-color: rgba(168, 212, 241, 0.1);
@@ -639,7 +639,7 @@ font-size: 22px;
     }
     .card{
         width: 300px;
-        height: 500px;
+        height: 550px;
         margin-left: 0px;
         margin-top: 50px;
         background-color: rgba(168, 212, 241, 0.1);
@@ -658,7 +658,7 @@ font-size: 22px;
     }
     .endcard{
         width: 300px;
-        height: 500px;
+        height: 550px;
         margin-left: 0px;
         margin-top: 100px;
         background-color: rgba(168, 212, 241, 0.1);
