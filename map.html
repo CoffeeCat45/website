@@ -46,7 +46,6 @@
     </header>
 
     <div id="map"></div>
-
     <!-- Подключение скрипта Leaflet -->
     <script
       src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
@@ -93,16 +92,10 @@
           ["Нечкино", 56.67159312318486, 53.74484599334207],
           ["Полазна", 58.33634284023345, 56.42605111464669],
           ["Гора Белая", 57.66266117240451, 59.69100637785675]
-
-
-          
         ];
-
-
         points.forEach(function (item) {
           L.marker([item[1], item[2]]).addTo(map).bindPopup(item[0]);
         }),
-
         // Обновление размера карты после загрузки
         map.invalidateSize();
       });
