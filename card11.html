@@ -133,6 +133,57 @@
         </div>
       </section>
     </main>
+
+      <!-- СЛАЙДЕР НАЧАЛО -->
+      <section class="slider">
+        <div class="slider__wrapper">
+          <button class="slider__arrow slider__arrow--prev">&#10094;</button>
+          <img src="./img/slider1.jpg" class="slider__img" alt="Слайд 1" />
+          <button class="slider__arrow slider__arrow--next">&#10095;</button>
+        </div>
+      </section>
+      <script>
+        (function () {
+          const images = [
+            "./img/slider-img/Фото-1.jpg ",
+            "./img/slider-img/Фото-2.jpg ",
+            "./img/slider-img/Фото-3.jpg ",
+            "./img/slider-img/Фото-4.jpg ",
+            "./img/slider-img/Фото-5.jpg ",
+          ];
+          let current = 0;
+          const imgEl = document.querySelector(".slider__img");
+          const prevBtn = document.querySelector(".slider__arrow--prev");
+          const nextBtn = document.querySelector(".slider__arrow--next");
+
+          function updateSlide() {
+            imgEl.src = images[current];
+            imgEl.alt = `Слайд ${current + 1}`;
+            imgEl.classList.add("fade-out");
+
+            setTimeout(() => {
+              imgEl.src = images[current];
+              imgEl.alt = `Слайд ${current + 1}`;
+              imgEl.classList.remove("fade-out");
+            }, 300);
+          }
+
+          prevBtn.addEventListener("click", () => {
+            current = (current - 1 + images.length) % images.length;
+            updateSlide();
+          });
+
+          nextBtn.addEventListener("click", () => {
+            current = (current + 1) % images.length;
+            updateSlide();
+          });
+          // предотвратить выделение и перетаскивание картинки
+          imgEl.addEventListener("dragstart", (e) => e.preventDefault());
+          // инициализация первого слайда
+          updateSlide();
+        })();
+      </script>
+      <!-- СЛАЙДЕР КОНЕЦ -->
     <div class="footer-wrapper">
       <footer class="footer">
         <a href="./" class="footer-link"
