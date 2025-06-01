@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkiResort</title>
+    <link rel="icon" href="./img/svg/MainLogo 1.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./css/stylecard.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrapper">
+        <div class="header_wrapper">
+          <div class="header_logo">
+            <a href="./" class="header_logo-link">
+              <img
+                src="./img/svg/MainLogo 1.svg"
+                alt="SkiResort"
+                class="header_logo-pic"
+              />
+            </a>
+          </div>
+          <nav class="header_nav">
+            <ul class="header_list">
+              <li class="header_item">
+                <a href="./contacts.html" class="header_link">контакты</a>
+              </li>
+              <li class="header_item">
+                <a href="./company.html" class="header_link">о компании</a>
+              </li>
+              <li class="header_item">
+                <a href="./map.html" class="header_link">карта</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="intro">
+        <div class="wrapper_content">
+          <div class="main-text-wrapper">
+            <h2 class="page-title">Такман</h2>
+          </div>
+          <img
+            src="./img/svg/Inf-photo/takman-1230x853.jpg"
+            alt="main-pic"
+            class="content-pict"
+          />
+        </div>
+      </section>
+
+      <section>
+        <div class="text">
+          <div class="content-text">
+            <div class="entry-content">
+              <p>
+                Самый восточный курорт в Европе «Такман» находится в Пермском крае. Трассы 
+                проложены в хвойном лесу, который придает активному отдыху дополнительное 
+                очарование и защищает поверхность спусков от ветров и создает здесь почти идеальные 
+                условия для комфортного катания.
+              </p>
+              <p class="bold">Сезон</p>
+              <p>С начала ноября до конца апреля</p>
+              <p class="bold">Трассы</p>
+              <p>
+                Для любителей горнолыжного спорта и сноубординга оборудовано 8 трасс общей 
+                протяженностью 9 км. Два спуска имеют освещение, что делает возможным вечернее 
+                катание. Зеленые, синие, красные трассы по сложности катания.
+              </p>
+              <p>
+                Самая крутая трасса с уклоном 36 градусов, протяженностью 600 м и перепадом высот 200 м.
+              </p>
+              <p class="bold">Подъемники</p>
+              <p>4 подъемника бугельного типа</p>
+              <p class="bold">Особенности</p>
+              <p>
+                Для сноубордистов есть сноупарк, который оборудован боксами, рейлами и трамплинами 
+                различной конфигурации. Есть три лесные трассы для любителей фрирайда.
+              </p>
+              <p>
+                Отдельная трасса для катания на тюбингах.
+              </p>
+              <p class="bold">Недостатки</p>
+              <p>
+                Среди недостатков курорта для искушенных спортсменов — короткая протяженность трасс 
+                (самая длинная трасса 1150 м) и пологие склоны.
+              </p>
+              <p class="bold">Искусственное оснежение</p>
+              <p>Есть</p>
+              <p class="bold">Стоимость</p>
+              <p>Разовый подъем — 100 рублей, 1 час — 350 рублей, 1,5 часа — 430 рублей.</p>
+              <p class="bold">Где находится</p>
+              <p>
+                ГЛЦ Такман находится в 5 км от г. Чусового, на левом берегу реки Вильва, в 130 км от 
+                Перми.
+              </p>
+              <p class="bold">Как добраться</p>
+              <p>
+                Из Перми можно доехать на поезде до станции Чусовская. Далее на такси или автобусе.
+              </p>
+              <p>
+                На автомобиле по трассе Пермь-Чусовой, через г. Чусовой в горнозаводском направлении, 
+                далее по указателю на Такман.
+              </p>
+              <p class="bold">Размещение</p>
+              <p>
+                На территории ГЛЦ есть несколько гостиничных домов, также можно снять квартиру 
+                посуточно в частном секторе в городе Чусовой.
+              </p>
+              <p class="bold">Дополнительные услуги</p>
+              <p>Прокат горнолыжного снаряжения, обучение с инструктором, ремонт снаряжения, детская 
+                игровая комната, камера хранения, парковка.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  <!-- СЛАЙДЕР НАЧАЛО -->
+  <section class="slider">
+    <div class="slider__wrapper">
+      <button class="slider__arrow slider__arrow--prev">&#10094;</button>
+
+      <div class="slide">
+        <div class="overlay"></div>
+        <img src="./img/slider1.jpg" class="slider__img" alt="Слайд 1" />
+      </div>
+
+      <button class="slider__arrow slider__arrow--next">&#10095;</button>
+    </div>
+  </section>
+  <!-- СЛАЙДЕР КОНЕЦ -->
+
+  <!-- ЛАЙТБОКС НАЧАЛО -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="Large View" />
+  </div>
+  <!-- ЛАЙТБОКС КОНЕЦ -->
+
+  <!--скрипт слайдера -->
+  <script>
+    (function () {
+      const images = [
+        "./img/slider-img/Snezhnij-bars/photo-1.jpg",
+        "./img/slider-img/Snezhnij-bars/photo-2.jpg",
+        "./img/slider-img/Snezhnij-bars/photo-3.jpg",
+        "./img/slider-img/Snezhnij-bars/photo-4.jpg",
+        "./img/slider-img/Snezhnij-bars/photo-5.jpg",
+      ];
+      let current = 0;
+      const imgEl = document.querySelector(".slider__img");
+      const prevBtn = document.querySelector(".slider__arrow--prev");
+      const nextBtn = document.querySelector(".slider__arrow--next");
+
+      function updateSlide() {
+        imgEl.src = images[current];
+        imgEl.alt = `Слайд ${current + 1}`;
+        imgEl.classList.add("fade-out");
+
+        setTimeout(() => {
+          imgEl.src = images[current];
+          imgEl.alt = `Слайд ${current + 1}`;
+          imgEl.classList.remove("fade-out");
+        }, 300);
+      }
+
+      prevBtn.addEventListener("click", () => {
+        current = (current - 1 + images.length) % images.length;
+        updateSlide();
+      });
+
+      nextBtn.addEventListener("click", () => {
+        current = (current + 1) % images.length;
+        updateSlide();
+      });
+
+      imgEl.addEventListener("dragstart", (e) => e.preventDefault());
+      updateSlide();
+    })();
+  </script>
+
+  <!-- СКРИПТ ЛАЙТБОКСА -->
+  <script>
+    (function () {
+      const modal = document.getElementById("lightboxModal");
+      const modalImg = document.getElementById("lightboxImg");
+      const modalClose = document.getElementById("lightboxClose");
+      const slideImg = document.querySelector(".slider__img");
+
+      // Открываем лайтбокс при клике на слайд
+      slideImg.addEventListener("click", function () {
+        modalImg.src = this.src;
+        modal.classList.add("open");
+      });
+
+      // Закрываем при клике на крестик
+      modalClose.addEventListener("click", function () {
+        modal.classList.remove("open");
+        modalImg.src = "";
+      });
+
+      // Закрываем при клике на затемнённый фон
+      modal.addEventListener("click", function (e) {
+        if (e.target === modal) {
+          modal.classList.remove("open");
+          modalImg.src = "";
+        }
+      });
+
+      // Чтобы клик по самой картинке не закрывал окно
+      modalImg.addEventListener("click", function (e) {
+        e.stopPropagation();
+      });
+    })();
+  </script>
+    <div class="footer-wrapper">
+      <footer class="footer">
+        <a href="./" class="footer-link"
+          >SkiResort - Горнолыжные курорты Урала</a
+        >
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkiResort</title>
+    <link rel="icon" href="./img/svg/MainLogo 1.svg" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/stylecard.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrapper">
+        <div class="header_wrapper">
+          <div class="header_logo">
+            <a href="./" class="header_logo-link">
+              <img
+                src="./img/svg/MainLogo 1.svg"
+                alt="SkiResort"
+                class="header_logo-pic"
+              />
+            </a>
+          </div>
+          <nav class="header_nav">
+            <ul class="header_list">
+              <li class="header_item">
+                <a href="./contacts.html" class="header_link">контакты</a>
+              </li>
+              <li class="header_item">
+                <a href="./company.html" class="header_link">о компании</a>
+              </li>
+              <li class="header_item">
+                <a href="./map.html" class="header_link">карта</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="intro">
+        <div class="wrapper_content">
+          <div class="main-text-wrapper">
+            <h2 class="page-title">Трехгорье</h2>
+          </div>
+          <img
+            src="./img/svg/Inf-photo/trehgorie-1230x1230.jpg"
+            alt="main-pic"
+            class="content-pict"
+          />
+        </div>
+      </section>
+
+      <section>
+        <div class="text">
+          <div class="content-text">
+            <div class="entry-content">
+              <p>
+                Комплекс «Трехгорье» расположен в самом сердце Ханты-Мансийского
+                округа, среди живописных гор и лесов, на левом берегу Оби.
+              </p>
+              <p class="bold">Сезон</p>
+              <p>C декабря по апрель</p>
+              <p class="bold">Трассы</p>
+              <p>
+                6 горнолыжных трасс общей протяженностью около 1,5 км с
+                перепадами высот до 50 м. Максимальная длина трасы — 280 м. По
+                сложности трассы от зеленых до черных. Есть спуск для обучения,
+                трасса для беговых лыж и сноутюбингов, троллея и зорба.
+              </p>
+              <p class="bold">Подъемники</p>
+              <p>2 бугельных подъемника</p>
+              <p class="bold">Особенности</p>
+              <p>
+                Горнолыжные трассы комплекса имеют отличное состояние, поскольку
+                ухаживают за ними с использованием снегоуплотнительной техники.
+                Трассы освещены, можно кататься в вечернее время.
+              </p>
+              <p class="bold">Недостатки</p>
+              <p>
+                Трассы короткие. Отсутствие кресельного подъемника может стать
+                проблемой для начинающих райдеров.
+              </p>
+              <p class="bold">Искусственное оснежение</p>
+              <p>Есть, снежные пушки</p>
+              <p class="bold">Стоимость</p>
+              <p>
+                Ски-пасс на 2 часа в будни— 450 рублей, в выходные — 700 рублей;
+                дневной ски-пасс — 1500 рублей.
+              </p>
+              <p class="bold">Где находится</p>
+              <p>В 30 км от города Нижневартовска, район поселка Ермаковский</p>
+              <p class="bold">Как добраться</p>
+              <p>
+                До склонов можно добраться только на автомобиле. При поездке на
+                машине из Нижневартовска нужно следовать по улице 2П-2 не
+                сворачивая. Потом необходимо переехать на другой берег по обской
+                переправе и двигаться прямо по Ермаковской трассе до развилки в
+                конце трассы. Там нужно выбрать поворот налево по направлению
+                Нижневартовск-Зайцева речка. Спустя 11 км после переправы
+                свернуть налево под указатель ГЛК «Трехгорье» и двигаться по
+                этой дороге уже до склонов ГЛК.
+              </p>
+              <p class="bold">Размещение</p>
+              <p>
+                Удобнее всего разместить в частном секторе Нижневартовска,
+                средняя стоимость посуточной аренды — 1900 рублей.
+              </p>
+              <p class="bold">Дополнительные услуги</p>
+              <p>
+                Прокат снаряжения, инструкторы, стрельба по летающим тарелкам,
+                детский городок, русская баня. Аттракцион — стометровый спуск в
+                стеклянном шаре.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  <!-- СЛАЙДЕР НАЧАЛО -->
+  <section class="slider">
+    <div class="slider__wrapper">
+      <button class="slider__arrow slider__arrow--prev">&#10094;</button>
+
+      <div class="slide">
+        <div class="overlay"></div>
+        <img src="./img/slider1.jpg" class="slider__img" alt="Слайд 1" />
+      </div>
+
+      <button class="slider__arrow slider__arrow--next">&#10095;</button>
+    </div>
+  </section>
+  <!-- СЛАЙДЕР КОНЕЦ -->
+
+  <!-- ЛАЙТБОКС НАЧАЛО -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="Large View" />
+  </div>
+  <!-- ЛАЙТБОКС КОНЕЦ -->
+
+  <!--скрипт слайдера -->
+  <script>
+    (function () {
+      const images = [
+        "./img/slider-img/Snezhnij-bars/photo-1.jpg",
+        "./img/slider-img/Snezhnij-bars/photo-2.jpg",
+        "./img/slider-img/Snezhnij-bars/photo-3.jpg",
+        "./img/slider-img/Snezhnij-bars/photo-4.jpg",
+        "./img/slider-img/Snezhnij-bars/photo-5.jpg",
+      ];
+      let current = 0;
+      const imgEl = document.querySelector(".slider__img");
+      const prevBtn = document.querySelector(".slider__arrow--prev");
+      const nextBtn = document.querySelector(".slider__arrow--next");
+
+      function updateSlide() {
+        imgEl.src = images[current];
+        imgEl.alt = `Слайд ${current + 1}`;
+        imgEl.classList.add("fade-out");
+
+        setTimeout(() => {
+          imgEl.src = images[current];
+          imgEl.alt = `Слайд ${current + 1}`;
+          imgEl.classList.remove("fade-out");
+        }, 300);
+      }
+
+      prevBtn.addEventListener("click", () => {
+        current = (current - 1 + images.length) % images.length;
+        updateSlide();
+      });
+
+      nextBtn.addEventListener("click", () => {
+        current = (current + 1) % images.length;
+        updateSlide();
+      });
+
+      imgEl.addEventListener("dragstart", (e) => e.preventDefault());
+      updateSlide();
+    })();
+  </script>
+
+  <!-- СКРИПТ ЛАЙТБОКСА -->
+  <script>
+    (function () {
+      const modal = document.getElementById("lightboxModal");
+      const modalImg = document.getElementById("lightboxImg");
+      const modalClose = document.getElementById("lightboxClose");
+      const slideImg = document.querySelector(".slider__img");
+
+      // Открываем лайтбокс при клике на слайд
+      slideImg.addEventListener("click", function () {
+        modalImg.src = this.src;
+        modal.classList.add("open");
+      });
+
+      // Закрываем при клике на крестик
+      modalClose.addEventListener("click", function () {
+        modal.classList.remove("open");
+        modalImg.src = "";
+      });
+
+      // Закрываем при клике на затемнённый фон
+      modal.addEventListener("click", function (e) {
+        if (e.target === modal) {
+          modal.classList.remove("open");
+          modalImg.src = "";
+        }
+      });
+
+      // Чтобы клик по самой картинке не закрывал окно
+      modalImg.addEventListener("click", function (e) {
+        e.stopPropagation();
+      });
+    })();
+  </script>
+    <div class="footer-wrapper">
+      <footer class="footer">
+        <a href="./" class="footer-link"
+          >SkiResort - Горнолыжные курорты Урала</a
+        >
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SkiResort</title>
+    <link rel="icon" href="./img/svg/MainLogo 1.svg" type="image/x-icon">
+    <link rel="stylesheet" href="./css/stylecard.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="wrapper">
+        <div class="header_wrapper">
+          <div class="header_logo">
+            <a href="./" class="header_logo-link">
+              <img
+                src="./img/svg/MainLogo 1.svg"
+                alt="SkiResort"
+                class="header_logo-pic"
+              />
+            </a>
+          </div>
+          <nav class="header_nav">
+            <ul class="header_list">
+              <li class="header_item">
+                <a href="./contacts.html" class="header_link">контакты</a>
+              </li>
+              <li class="header_item">
+                <a href="./company.html" class="header_link">о компании</a>
+              </li>
+              <li class="header_item">
+                <a href="./map.html" class="header_link">карта</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="intro">
+        <div class="wrapper_content">
+          <div class="main-text-wrapper">
+            <h2 class="page-title">Волчиха</h2>
+          </div>
+          <img
+            src="./img/svg/Inf-photo/volchiha-1230x720.jpg"
+            alt="main-pic"
+            class="content-pict"
+          />
+        </div>
+      </section>
+
+      <section>
+        <div class="text">
+          <div class="content-text">
+            <div class="entry-content">
+              <p>
+                Гора Волчиха самая высокая гора (526 м) в окрестностях Екатеринбурга.
+              </p>
+              <p class="bold">Сезон</p>
+              <p>C декабря по апрель</p>
+              <p class="bold">Трассы</p>
+              <p>
+                4 трассы различной сложности, длиной от 600 до 1200 метров. Подходят для начинающих.
+              </p>
+              <p class="bold">Подъемники</p>
+              <p> 4 одноместных бугельных подъемника «тарелка» и бэби-лифт.</p>
+              <p class="bold">Особенности</p>
+              <p>
+                Подходит как новичкам, так и хорошо подготовленным сноубодистам и лыжникам. Есть 
+                сноупарк и аэроподушка. Есть вечернее катание.
+              </p>
+              <p class="bold">Недостатки</p>
+              <p>
+                Мало подготовленных склонов.
+              </p>
+              <p class="bold">Искусственное оснежение</p>
+              <p>Есть</p>
+              <p class="bold">Стоимость</p>
+              <p>3 часа катания в выходные и праздничные дни — 1200 рублей, в будни — 1000 рублей. 
+                Гибкая система скидок.</p>
+              <p class="bold">Где находится</p>
+              <p>
+                Гора расположена в 40 км от Екатеринбурга, в 5 км от Ревды.
+              </p>
+              <p class="bold">Как добраться</p>
+              <p>
+                На автомобиле из Екатеринбурга по Московскому тракту 31 километр, далее поворот 
+                налево и 1,3 км по широкой дороге.
+              </p>
+              <p>
+                На электричке из Екатеринбурга до станции «Пионерская».
+              </p>
+              <p class="bold">Размещение</p>
+              <p>
+                Снять недорогое жилье можно в частном секторе городов Первоуральск и Ревда.
+              </p>
+              <p class="bold">Дополнительные услуги</p>
+              <p>Детская комната, медпункт, аренда снегоходов, прокат, каток, инструкторы.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+  <!-- СЛАЙДЕР НАЧАЛО -->
+  <section class="slider">
+    <div class="slider__wrapper">
+      <button class="slider__arrow slider__arrow--prev">&#10094;</button>
+
+      <div class="slide">
+        <div class="overlay"></div>
+        <img src="./img/slider1.jpg" class="slider__img" alt="Слайд 1" />
+      </div>
+
+      <button class="slider__arrow slider__arrow--next">&#10095;</button>
+    </div>
+  </section>
+  <!-- СЛАЙДЕР КОНЕЦ -->
+
+  <!-- ЛАЙТБОКС НАЧАЛО -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="Large View" />
+  </div>
+  <!-- ЛАЙТБОКС КОНЕЦ -->
+
+  <!--скрипт слайдера -->
+  <script>
+    (function () {
+      const images = [
+        "./img/slider-img/Snezhnij-bars/photo-1.jpg",
+        "./img/slider-img/Snezhnij-bars/photo-2.jpg",
+        "./img/slider-img/Snezhnij-bars/photo-3.jpg",
+        "./img/slider-img/Snezhnij-bars/photo-4.jpg",
+        "./img/slider-img/Snezhnij-bars/photo-5.jpg",
+      ];
+      let current = 0;
+      const imgEl = document.querySelector(".slider__img");
+      const prevBtn = document.querySelector(".slider__arrow--prev");
+      const nextBtn = document.querySelector(".slider__arrow--next");
+
+      function updateSlide() {
+        imgEl.src = images[current];
+        imgEl.alt = `Слайд ${current + 1}`;
+        imgEl.classList.add("fade-out");
+
+        setTimeout(() => {
+          imgEl.src = images[current];
+          imgEl.alt = `Слайд ${current + 1}`;
+          imgEl.classList.remove("fade-out");
+        }, 300);
+      }
+
+      prevBtn.addEventListener("click", () => {
+        current = (current - 1 + images.length) % images.length;
+        updateSlide();
+      });
+
+      nextBtn.addEventListener("click", () => {
+        current = (current + 1) % images.length;
+        updateSlide();
+      });
+
+      imgEl.addEventListener("dragstart", (e) => e.preventDefault());
+      updateSlide();
+    })();
+  </script>
+
+  <!-- СКРИПТ ЛАЙТБОКСА -->
+  <script>
+    (function () {
+      const modal = document.getElementById("lightboxModal");
+      const modalImg = document.getElementById("lightboxImg");
+      const modalClose = document.getElementById("lightboxClose");
+      const slideImg = document.querySelector(".slider__img");
+
+      // Открываем лайтбокс при клике на слайд
+      slideImg.addEventListener("click", function () {
+        modalImg.src = this.src;
+        modal.classList.add("open");
+      });
+
+      // Закрываем при клике на крестик
+      modalClose.addEventListener("click", function () {
+        modal.classList.remove("open");
+        modalImg.src = "";
+      });
+
+      // Закрываем при клике на затемнённый фон
+      modal.addEventListener("click", function (e) {
+        if (e.target === modal) {
+          modal.classList.remove("open");
+          modalImg.src = "";
+        }
+      });
+
+      // Чтобы клик по самой картинке не закрывал окно
+      modalImg.addEventListener("click", function (e) {
+        e.stopPropagation();
+      });
+    })();
+  </script>
+    <div class="footer-wrapper">
+      <footer class="footer">
+        <a href="./" class="footer-link"
+          >SkiResort - Горнолыжные курорты Урала</a
+        >
+      </footer>
+    </div>
+  </body>
+</html>

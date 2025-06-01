@@ -582,6 +582,8 @@ opacity: 75%;
   margin-bottom: 50px;
   background-color: rgba(244, 242, 255, 1);
   border-radius: 15px;
+    height: 300px;               /* <- здесь фиксированная высота */
+
 }
 .slider__wrapper {
   position: relative;
@@ -592,10 +594,13 @@ opacity: 75%;
   max-height: 300px;
   overflow: hidden;
   height: 300px;
+    height: 100%;               /* <- чтобы занять всю высоту .slider */
+
+  
 }
 .slider__img {
   width: 100%;
-  height: 400px;
+  height: 100%;
   display: block;
   user-select: none;
   object-fit: cover; 
@@ -610,23 +615,55 @@ opacity: 75%;
   background: rgba(0, 0, 0, 0.5);
   border: none;
   color: #fff;
-  font-size: 2rem;
-  width: 40px;
-  height: 60px;
+    font-size: 3rem;
+    width: 50px;
+    height: 70px;
   cursor: pointer;
   z-index: 10;
   border-radius: 30px;
 }
 .slider__arrow--prev {
-  left: 10px;
+  left: 5px;
 }
 .slider__arrow--next {
-  right: 10px;
+  right: 5px;
 }
 .slider__arrow:focus {
   outline: none;
 }
 
+
+.slider__wrapper .slide {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+ width: 100%;
+}
+.slider__wrapper .slide .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  border-radius: 15px;
+}
+.slider__wrapper .slide .slider__img {
+  display: block;
+ width: 100%;
+  height: 100%;  
+  transition: transform 0.3s ease;
+  transform-origin: center center;
+  position: relative;
+  z-index: 2;
+   object-fit: cover; 
+}
+.slider__wrapper .slide:hover .overlay {
+  opacity: 1;
+}
+.slider__wrapper .slide:hover .slider__img {
+  transform: scale(0.8);
+}
 
 @media (min-width: 320px) and (max-width: 1200px){
     .header {        
@@ -728,40 +765,49 @@ opacity: 75%;
 
 
 
+/* ===== ЛАЙТБОКС: стили модального окна ===== */
 
-/* в конец stylecard.css */
-
-.slider__wrapper .slide {
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
+/* Само модальное окно — на весь экран, по центру */
+.lightbox-modal {
+  display: none;                /* спрятано по умолчанию */
+  position: fixed;
+  z-index: 1000;                /* поверх всего */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* затемнённый фон */
+  justify-content: center;
+  align-items: center;
 }
 
-.slider__wrapper .slide .overlay {
+/* Когда нужно показать модалку, просто добавить класс или через JS: display: flex */
+.lightbox-modal.open {
+  display: flex;
+}
+
+/* Сама картинка в модалке */
+.lightbox-img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* Кнопка закрытия (крестик) */
+.lightbox-close {
   position: absolute;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.5);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 1;
-  border-radius: 15px;
+  top: 20px;
+  right: 30px;
+  color: #fff;
+  font-size: 3rem;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  transition: opacity 0.2s ease;
 }
 
-.slider__wrapper .slide .slider__img {
-  display: block;
- width: 100%;
-  height: 100%;  
-  transition: transform 0.3s ease;
-  transform-origin: center center;
-  position: relative;
-  z-index: 2;
-   object-fit: cover; 
-}
-
-.slider__wrapper .slide:hover .overlay {
-  opacity: 1;
-}
-
-.slider__wrapper .slide:hover .slider__img {
-  transform: scale(0.8);
+.lightbox-close:hover {
+  opacity: 0.7;
 }
