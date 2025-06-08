@@ -660,12 +660,6 @@ opacity: 75%;
   z-index: 2;
    object-fit: cover; 
 }
-.slider__wrapper .slide:hover .overlay {
-  opacity: 1;
-}
-.slider__wrapper .slide:hover .slider__img {
-  transform: scale(0.8);
-}
 
 @media (min-width: 320px) and (max-width: 1200px){
     .header {        
